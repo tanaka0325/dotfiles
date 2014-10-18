@@ -24,6 +24,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 \ }
 " neocomplcache
 NeoBundle 'Shougo/neocomplcache'
+" tcomment_vim
 NeoBundle 'tomtom/tcomment_vim'
 
 " Refer to |:NeoBundle-examples|.
