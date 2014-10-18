@@ -33,4 +33,3 @@ imap %% %%<Left>
 " jjでESC
 inoremap jj <ESC>
 
-

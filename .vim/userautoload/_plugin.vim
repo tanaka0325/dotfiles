@@ -13,20 +13,19 @@ call neobundle#begin(expand('~/dotfiles/.vim/bundle/'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+" My Bundles here:
 " Unite
 NeoBundle 'Shougo/unite.vim'
 " vimproc
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
 \     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
 \    },
 \ }
+" neocomplcache
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'tomtom/tcomment_vim'
 
-" My Bundles here:
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 
