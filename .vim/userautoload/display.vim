@@ -70,4 +70,3 @@ colorscheme Tomorrow-Night-Bright
 
 " 自動折返しを日本語対応
 set formatoptions+=mM
-"
