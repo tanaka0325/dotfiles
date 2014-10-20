@@ -46,11 +46,11 @@ set smartindent
 "C用のindent
 set cindent
 "<TAB>の挿入や<BS>の使用等で、<TAB>が対応する空白の数
-set softtabstop=4
+set softtabstop=2
 "<TAB>が対応する空白の数
-set tabstop=4
+set tabstop=2
 "インデントの各段階に使われる空白の数
-set shiftwidth=4
+set shiftwidth=2
 "Insertモードで<TAB>を入れるとき、代わりに適切な数の空白を使う
 set expandtab
 " クリップボードに
