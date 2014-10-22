@@ -26,6 +26,8 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'Shougo/neocomplcache'
 " tcomment_vim
 NeoBundle 'tomtom/tcomment_vim'
+" Ruby向けにendを自動挿入してくれる
+NeoBundle 'tpope/vim-endwise'
 
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
