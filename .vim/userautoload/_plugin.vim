@@ -29,6 +29,9 @@ NeoBundle 'tomtom/tcomment_vim'
 " Ruby向けにendを自動挿入してくれる
 NeoBundle 'tpope/vim-endwise'
 
+"slim syntax
+NeoBundle 'slim-template/vim-slim'
+
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 
