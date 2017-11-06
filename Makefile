@@ -11,3 +11,6 @@ symlinks:
 	ln -s $(DOTFILES_DIR)/.editorconfig ~/.editorconfig
 zplug-init:
 	git clone https://github.com/zplug/zplug ~/.zplug
+.PHONY: clean
+clean:
+ rm -rf ~/.zshrc ~/.vimrc ~/.gitconfig ~/.gitignore_global ~/.gitmessage.txt ~/.editorconfig ~/.zplug
