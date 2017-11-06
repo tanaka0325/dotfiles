@@ -1,6 +1,10 @@
 dotfiles
 ========
+
+## Usage
+
 ```zsh
-$ ln -s ~/dotfiles/.vim ~/.vim
-$ ln -s ~/dotfiles/.vim/.vimrc ~/.vimrc
+$ git clone git@github.com:tanaka0325/dotfiles.git ~/dotfiles
+$ cd ~/dotfiles
+& make
 ```

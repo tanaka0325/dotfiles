@@ -1,0 +1,19 @@
+
+# e.g.）
+# - Add A to B
+# - Remove config/database.yml from git index and add it to gitignore
+# - Remove methods to avoid warnings
+# - Remove unused code
+# - Remove use of deprecated method
+# - Move funcname from LeadMailer to AdminMailer
+# - Implement app.streaming in all blocking servers
+# - Replace *A with *B
+# - Make javascript_include_tag :default behave correctly with app.js
+# - Change *A to *B
+# - Update packageName to v1.7.1_beta3
+# - Don't use "assert_not_nil"
+# - Use `Base.strict_decode64` instead of `Base.decode64`
+# - Fix typo in docs
+# - Refactor RoutesReloader a bit to avoid creating extra hash objects
+# - Switch from SHA2 to BCrypt
+# - Support multiple config.after_initialize blocks so plugins and apps can more easily cooperate
