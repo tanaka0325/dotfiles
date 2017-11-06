@@ -10,7 +10,7 @@ symlinks:
 	ln -s $(DOTFILES_DIR)/git/.gitmessage.txt ~/.gitmessage.txt
 	ln -s $(DOTFILES_DIR)/.editorconfig ~/.editorconfig
 zplug-init:
-	git clone https://github.com/zplug/zplug ~/.zplug
+	curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 .PHONY: clean
 clean:
- rm -rf ~/.zshrc ~/.vimrc ~/.gitconfig ~/.gitignore_global ~/.gitmessage.txt ~/.editorconfig ~/.zplug
+	rm -rf ~/.zshrc ~/.vimrc ~/.gitconfig ~/.gitignore_global ~/.gitmessage.txt ~/.editorconfig ~/.zplug
