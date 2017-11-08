@@ -42,7 +42,7 @@ set diffopt-=filler diffopt=iwhite,vertical
 "保存時に行末の空白を削除する
 autocmd BufWritePre * :%s/\s\+$//ge
 "保存時にtabをスペースに変換する
-autocmd BufWritePre * :%s/\t/ /ge
+"autocmd BufWritePre * :%s/\t/ /ge
 
 " terminalでのポップアップの色を赤に
 hi Pmenu ctermbg=0
@@ -98,7 +98,7 @@ set tabstop=4
 "インデントの各段階に使われる空白の数
 set shiftwidth=4
 "Insertモードで<TAB>を入れるとき、代わりに適切な数の空白を使う
-set expandtab
+"set expandtab
 " クリップボードに
 set clipboard+=unnamed
 " バックスペースでインデントや改行を削除できるようにする
