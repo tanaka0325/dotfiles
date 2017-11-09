@@ -1,3 +1,6 @@
+# keybind
+bindkey -e
+
 ## zplug
 source $HOME/.zplug/init.zsh
 # command highlight
