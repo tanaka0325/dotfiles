@@ -72,6 +72,7 @@ setopt auto_cd
 setopt extended_glob
 
 ## Alias
+alias rm="rm -i"
 alias ls="exa"
 alias ll="exa -lha"
 alias tree="exa -T"
