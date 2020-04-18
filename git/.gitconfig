@@ -5,13 +5,15 @@
   user = tanaka0325
 [core]
   editor = vim
-  excludesfile = ~/.gitignore_global
+  excludesfile = /Users/hiroyuki/.gitignore_global
+  autoCRLF = false
+  quotepath = false
 [push]
   default = simple
 [commit]
   template = ~/.gitmessage.txt
 [ghq]
-  root = /Users/tanaka/dev/src
+  root = /Users/hiroyuki/go/src
 [alias]
   # human-git-aliases
   unstage = reset HEAD --
@@ -43,3 +45,23 @@
   lp = log -p
   diffc = diff --cached
   difff = diff --word-diff
+  sw = switch
+[credential]
+  helper = osxkeychain
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[pager]
+  log = diff-highlight | less
+  show = diff-highlight | less
+  diff = diff-highlight | less
+[interactive]
+  diffFilter = diff-highlight | less
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[mergetool "sourcetree"]
+  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true

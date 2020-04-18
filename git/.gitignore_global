@@ -1,2 +1,4 @@
 .python-version
 .DS_Store
+.vscode/**/*
+vendor/bundle
