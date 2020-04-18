@@ -5,10 +5,6 @@ dotfiles
 
 ```zsh
 $ git clone git@github.com:tanaka0325/dotfiles.git ~/dotfiles
-$ cd ~/dotfiles
-$ make
-
-$ source ~/.zshrc
-$ zplug install
-$ source ~/.zshrc
+$ ln -s ~/dotfiles/zshrc ~/.zshrc
+$ ln -s ~/dotfiles/vimrc ~/.vimrc
 ```
