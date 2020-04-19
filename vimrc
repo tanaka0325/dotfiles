@@ -121,6 +121,8 @@ Plug 'markonm/traces.vim'
 Plug 'tyru/caw.vim'
 " filer
 Plug 'cocopon/vaffle.vim'
+" status line
+Plug 'itchyny/lightline.vim'
 " expand region
 Plug 'terryma/vim-expand-region'
 " coc.nvim
@@ -205,6 +207,8 @@ nmap <Leader>\ <Plug>(caw:hatpos:toggle)
 vmap <Leader>\ <Plug>(caw:hatpos:toggle)
 " coc
 nmap <c-]> <Plug>(coc-definition)
+" statusline
+let g:lightline = { 'colorscheme': 'one' }
 
 "それぞれ、連続で入力するとカーソルが()の間に戻る
 imap {} {}<Left>
