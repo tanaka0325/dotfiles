@@ -97,12 +97,8 @@ alias ll="exa -lha"
 alias tree="exa -T"
 alias l='less'
 alias fig='docker-compose'
-alias gosh='rlwrap gosh'
 alias np='hugo new post/$(date "+%Y%m%d%H%M%S").md'
 alias serv='python3 -m http.server'
-alias python2='python2.7'
-alias g='git'
-alias ctags="`brew --prefix`/bin/ctags"
 
 ## rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
@@ -163,13 +159,6 @@ if [ -f '/Users/tanaka/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/tan
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/tanaka/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/tanaka/google-cloud-sdk/completion.zsh.inc'; fi
 
-# Openssl
-OPENSSL_PATH=/usr/local/opt/openssl@1.1
-if [ -d "$OPENSSL_PATH" ];then
-#export PATH=$OPENSSL_PATH/bin:$PATH
-  export LD_LIBRARY_PATH=$OPENSSL_PATH/lib:$LD_LIBRARY_PATH
-  export CPATH=$OPENSSL_PATH/include:$LD_LIBRARY_PATH
-fi
-
 # for starship
 eval "$(starship init zsh)"
+
