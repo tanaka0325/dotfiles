@@ -171,13 +171,5 @@ if [ -d "$OPENSSL_PATH" ];then
   export CPATH=$OPENSSL_PATH/include:$LD_LIBRARY_PATH
 fi
 
-#export PATH="/usr/local/opt/elasticsearch@5.6/bin:$PATH"
-#export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-#export LD_LIBRARY_PATH="/usr/local/opt/openssl@1.1/lib:$LD_LIBRARY_PATH"
-#export CPATH="/usr/local/opt/openssl@1.1/include:$CPATH"
-#export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
-#export LDFLAGS="-L/usr/local/opt/readline/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/mysql@5.7/lib"
-#export CPPFLAGS="-I/usr/local/opt/readline/include -I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/mysql@5.7/include"
-
 # for starship
 eval "$(starship init zsh)"

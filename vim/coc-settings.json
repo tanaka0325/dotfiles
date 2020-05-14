@@ -1,0 +1,10 @@
+{
+	"coc.preferences.formatOnSaveFiletypes": ["ruby"],
+	"suggest.enablePreselect": true,
+	"solargraph.commandPath": "/usr/local/var/rbenv/shims/solargraph",
+	"solargraph.definitions": true,
+	"solargraph.autoformat": true,
+	"solargraph.formatting": true,
+	"solargraph.diagnostics": true,
+	"solargraph.hover": true
+}
