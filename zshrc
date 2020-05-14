@@ -101,23 +101,26 @@ alias np='hugo new post/$(date "+%Y%m%d%H%M%S").md'
 alias serv='python3 -m http.server'
 
 ## rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)";
+fi
 
 ## pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+if which pyenv > /dev/null; then
+  export PATH="$HOME/.pyenv/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
+
 ## pipenv
 export PIPENV_VENV_IN_PROJECT=true
 
 ## go
-export GOPATH=~/go
-export PATH=$GOPATH/bin:$PATH
 export GO111MODULE=on
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
+if which goenv > /dev/null; then
+  export PATH="$HOME/.goenv/bin:$PATH"
+  eval "$(goenv init -)"
+fi
 
 ## mysql
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
@@ -131,26 +134,29 @@ export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 # android
 export ANDROID_HOME=~/Library/Android/sdk
 
-# history search
-function select-history() {
-  BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
-  CURSOR=$#BUFFER
-  zle clear-screen
-}
-zle -N select-history
-bindkey '^r' select-history
+# fzf
+if which fzf > /dev/null; then
+  # history search
+  function select-history() {
+    BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
+    CURSOR=$#BUFFER
+    zle clear-screen
+  }
+  zle -N select-history
+  bindkey '^r' select-history
 
-# ghq list search
-function ghq-fzf() {
-  local selected_dir=$(ghq list | fzf --query="$LBUFFER")
-  if [ -n "$selected_dir" ]; then
-    BUFFER="cd $(ghq root)/${selected_dir}"
-    zle accept-line
-  fi
-  zle reset-prompt
-}
-zle -N ghq-fzf
-bindkey "^g" ghq-fzf
+  # ghq list search
+  function ghq-fzf() {
+    local selected_dir=$(ghq list | fzf --query="$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+      BUFFER="cd $(ghq root)/${selected_dir}"
+      zle accept-line
+    fi
+    zle reset-prompt
+  }
+  zle -N ghq-fzf
+  bindkey "^g" ghq-fzf
+fi
 
 # gcloud
 export PATH=$PATH:~/google-cloud-sdk/bin
