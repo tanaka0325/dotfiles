@@ -134,6 +134,9 @@ export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 # android
 export ANDROID_HOME=~/Library/Android/sdk
 
+# cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # fzf
 if which fzf > /dev/null; then
   # history search
