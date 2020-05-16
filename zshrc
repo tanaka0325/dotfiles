@@ -101,14 +101,14 @@ alias np='hugo new post/$(date "+%Y%m%d%H%M%S").md'
 alias serv='python3 -m http.server'
 
 ## rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then
-  # export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)";
 fi
 
 ## pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
 if which pyenv > /dev/null; then
-  export PATH="$HOME/.pyenv/bin:$PATH"
   eval "$(pyenv init -)"
 fi
 
@@ -117,8 +117,8 @@ export PIPENV_VENV_IN_PROJECT=true
 
 ## go
 export GO111MODULE=on
+export PATH="$HOME/.goenv/bin:$PATH"
 if which goenv > /dev/null; then
-  export PATH="$HOME/.goenv/bin:$PATH"
   eval "$(goenv init -)"
 fi
 
