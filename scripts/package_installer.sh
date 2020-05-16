@@ -26,14 +26,17 @@ apt_install zsh
 # starship
 curl -fsSL https://starship.rs/install.sh | sudo bash -s -- -y
 # zinit
-curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh | sudo bash -s -- -y
+# curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh | sudo bash -s -- -y
+
+mkdir ~/.zinit
+git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
 
 ##############
 # vim
 ##############
 apt_install vim
 # vim-plug
-curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs \
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ##############
@@ -42,7 +45,7 @@ curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs \
 apt_install rbenv
 apt_install ruby-build
 # golang
-git clone https://github.com/syndbg/goenv.git "$HOME/.goenv"
+git clone https://github.com/syndbg/goenv.git ~/.goenv
 # nodejs
 curl -L https://git.io/n-install | sudo bash -s -- -y
 

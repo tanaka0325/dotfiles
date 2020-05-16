@@ -13,4 +13,5 @@ cd `dirname $0`
 sudo sed --in-place -e '/auth.*required.*pam_shells.so/s/required/sufficient/g' /etc/pam.d/chsh
 chsh -s $(which zsh)
 
-source "$HOME/.zshrc"
+source ~/.zinit/bin/zinit.zsh
+source ~/.zshrc

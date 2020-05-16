@@ -1,9 +1,9 @@
 #!/bin/bash
 
-ln -s "$HOME/dotfiles/zshrc" "$HOME/.zshrc"
-ln -s "$HOME/dotfiles/vim" "$HOME/.vim"
-ln -s "$HOME/dotfiles/tmux.conf" "$HOME/.tmux.conf"
-ln -s "$HOME/dotfiles/git/gitconfig" "$HOME/.gitconfig"
-ln -s "$HOME/dotfiles/git/gitignore_global" "$HOME/.gitignore_global"
-ln -s "$HOME/dotfiles/git/gitmessage.txt" "$HOME/.gitmessage.txt"
+ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/vim ~/.vim
+ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
+ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global
+ln -s ~/dotfiles/git/gitmessage.txt ~/.gitmessage.txt
 
