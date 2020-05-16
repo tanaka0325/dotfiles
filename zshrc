@@ -102,7 +102,7 @@ alias serv='python3 -m http.server'
 
 ## rbenv
 if which rbenv > /dev/null; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
+  # export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)";
 fi
 
