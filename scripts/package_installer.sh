@@ -4,7 +4,8 @@
 sudo apt update && sudo apt full-upgrade -y
 
 function apt_install {
-  if which $1 &> /dev/null; then
+  which $1 &> /dev/null
+  if [ $? -ne 0 ]; then
     echo "Installing: ${1}..."
     sudo apt install -y $1
   else
