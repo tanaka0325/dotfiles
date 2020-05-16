@@ -18,6 +18,7 @@ function apt_install {
 ##############
 apt_install git
 apt_install fzf
+apt_install tmux
 
 ##############
 # zsh
