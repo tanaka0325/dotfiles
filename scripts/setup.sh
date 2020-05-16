@@ -10,8 +10,7 @@ cd `dirname $0`
 ./symlinks.sh
 
 # chsh
-sudo sed --in-place -e '/auth.*required.*pam_shells.so/s/required/sufficient/g' /etc/pam.d/chsh
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh) vagrant
 
-source ~/.zinit/bin/zinit.zsh
-source ~/.zshrc
+# done
+echo "Done: please relogin."

@@ -16,6 +16,7 @@ function apt_install {
 ##############
 # utilities
 ##############
+apt_install build-essential
 apt_install git
 apt_install fzf
 apt_install tmux
@@ -24,13 +25,11 @@ apt_install tmux
 # zsh
 ##############
 apt_install zsh
+
 # starship
 curl -fsSL https://starship.rs/install.sh | sudo bash -s -- -y
 # zinit
-# curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh | sudo bash -s -- -y
-
-mkdir ~/.zinit
-git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
+curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh | bash -s -- -y
 
 ##############
 # vim
