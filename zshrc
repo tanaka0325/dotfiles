@@ -40,7 +40,7 @@ zinit wait lucid atload"zicompinit; zicdreplay" blockf for zsh-users/zsh-complet
 export FZF_DEFAULT_OPTS='--height 80% --reverse --border'
 
 ## Editor
-export EDITOR='code'
+export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'
 
@@ -121,12 +121,6 @@ export PATH="$HOME/.goenv/bin:$PATH"
 if which goenv > /dev/null; then
   eval "$(goenv init -)"
 fi
-
-## mysql
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/mysql@5.7/lib"
-export CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
-export PKG_CONFIG_PATH="/usr/local/opt/mysql@5.7/lib/pkgconfig"
 
 # git
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight

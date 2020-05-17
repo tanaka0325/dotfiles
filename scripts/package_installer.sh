@@ -42,8 +42,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ##############
 # languages
 ##############
-apt_install rbenv
-apt_install ruby-build
+# ruby
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 # golang
 git clone https://github.com/syndbg/goenv.git ~/.goenv
 # nodejs
