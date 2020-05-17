@@ -5,7 +5,7 @@
   user = tanaka0325
 [core]
   editor = vim
-  excludesfile = /Users/hiroyuki/.gitignore_global
+  excludesfile = ~/.gitignore_global
   autoCRLF = false
   quotepath = false
 [push]
@@ -13,7 +13,7 @@
 [commit]
   template = ~/.gitmessage.txt
 [ghq]
-  root = /Users/hiroyuki/go/src
+  root = ~/go/src
 [alias]
   # human-git-aliases
   unstage = reset HEAD --
@@ -46,8 +46,8 @@
   diffc = diff --cached
   difff = diff --word-diff
   sw = switch
-[credential]
-  helper = osxkeychain
+#[credential]
+#   helper = osxkeychain
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
