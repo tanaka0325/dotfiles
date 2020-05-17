@@ -122,6 +122,9 @@ if which goenv > /dev/null; then
   eval "$(goenv init -)"
 fi
 
+## nodejs
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+
 # git
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
