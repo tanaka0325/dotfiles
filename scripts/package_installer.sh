@@ -49,6 +49,8 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-install
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 # golang
 git clone https://github.com/syndbg/goenv.git ~/.goenv
+apt_install golang-go
+go get github.com/x-motemen/ghq
 # nodejs
 curl -L https://git.io/n-install | bash -s -- -y
 
