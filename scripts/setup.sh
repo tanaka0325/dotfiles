@@ -14,3 +14,4 @@ sudo chsh -s $(which zsh) vagrant
 
 # done
 echo "Done: please relogin."
+echo "If you login next time, zsh plugins are started to install by zinit."
