@@ -117,6 +117,7 @@ export PIPENV_VENV_IN_PROJECT=true
 
 ## go
 export GO111MODULE=on
+export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.goenv/bin:$PATH"
 if which goenv > /dev/null; then
   eval "$(goenv init -)"
