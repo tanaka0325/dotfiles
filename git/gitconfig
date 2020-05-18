@@ -46,8 +46,6 @@
   diffc = diff --cached
   difff = diff --word-diff
   sw = switch
-#[credential]
-#   helper = osxkeychain
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
@@ -59,3 +57,5 @@
   diff = diff-highlight | less
 [interactive]
   diffFilter = diff-highlight | less
+[credential]
+  helper = store --file ~/.git-credentials
