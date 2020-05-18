@@ -12,10 +12,6 @@ for f in applications/*.sh; do bash "$f" -H; done
 # create symlinks
 ./symlinks.sh
 
-# download vim-plug
-# curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-#     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 # chsh
 sudo chsh -s $(which zsh) vagrant
 
