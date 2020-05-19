@@ -117,11 +117,12 @@ export PIPENV_VENV_IN_PROJECT=true
 
 ## go
 export GO111MODULE=on
-export PATH="$HOME/go/bin:$PATH"
-export PATH="$HOME/.goenv/bin:$PATH"
-if which goenv > /dev/null; then
-  eval "$(goenv init -)"
-fi
+# export PATH="$HOME/go/bin:$PATH"
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
 
 ## nodejs
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).

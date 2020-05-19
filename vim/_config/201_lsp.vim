@@ -26,4 +26,4 @@ set completeopt=menuone,noinsert,preview
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " auto format on save
-autocmd BufWritePre <buffer> LspDocumentFormatSync
+autocmd BufWritePre <buffer> LspDocumentFormat
