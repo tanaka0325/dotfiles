@@ -157,12 +157,11 @@ if which fzf > /dev/null; then
   bindkey "^g" ghq-fzf
 fi
 
-# gcloud
-export PATH=$PATH:~/google-cloud-sdk/bin
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/tanaka/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/tanaka/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
+
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/tanaka/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/tanaka/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
 
 # for starship
 eval "$(starship init zsh)"
