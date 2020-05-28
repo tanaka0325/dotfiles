@@ -61,6 +61,8 @@ set backspace=indent,eol,start
 set foldlevel=0
 " 自動折返しを日本語対応
 set formatoptions+=mM
+"
+filetype plugin indent on
 
 " plugins
 if empty(glob('~/.vim/autoload/plug.vim'))

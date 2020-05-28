@@ -2,7 +2,7 @@
 let mapleader = "\<Space>"
 
 " esc
-inoremap <silent> jj <ESC>
+inoremap <silent> jk <ESC>
 noremap <c-j> <ESC>
 noremap! <c-j> <ESC>
 
