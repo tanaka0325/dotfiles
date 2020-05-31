@@ -76,8 +76,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " color scheme
 Plug 'joshdick/onedark.vim'
-" go
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " replace
 Plug 'markonm/traces.vim'
 " comment out
@@ -95,8 +93,6 @@ Plug 'osyo-manga/vim-anzu'
 " git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-" coc.nvim
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " ruby
 " Plug 'tpope/vim-endwise'
 " slim
@@ -109,9 +105,10 @@ Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/vim-lsp'
-
 Plug 'mattn/vim-lsp-settings'
 Plug 'mattn/vim-goimports'
+
+Plug 'mattn/vim-lexiv'
 
 call plug#end()
 
