@@ -44,19 +44,13 @@
   ls = log --stat
   lp = log -p
   diffc = diff --cached
-  difff = diff --word-diff
+  diffw = diff --word-diff
   sw = switch
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
-[pager]
-  log = diff-highlight | less
-  show = diff-highlight | less
-  diff = diff-highlight | less
-[interactive]
-  diffFilter = diff-highlight | less
 [credential]
   helper = store --file ~/.git-credentials
 [merge]
