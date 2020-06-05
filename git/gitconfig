@@ -1,58 +1,60 @@
 [user]
-  name = Hiroyuki Tanaka
-  email = h.tanaka.0325@gmail.com
+	name = Hiroyuki Tanaka
+	email = h.tanaka.0325@gmail.com
 [github]
-  user = tanaka0325
+	user = tanaka0325
 [core]
-  editor = vim
-  excludesfile = ~/.gitignore_global
-  autoCRLF = false
-  quotepath = false
+	editor = vim
+	excludesfile = ~/.gitignore_global
+	autoCRLF = false
+	quotepath = false
 [push]
-  default = simple
+	default = simple
 [commit]
-  template = ~/.gitmessage.txt
+	template = ~/.gitmessage.txt
 [ghq]
-  root = ~/go/src
+	root = ~/go/src
+[fetch]
+	prune = true
 [alias]
-  # human-git-aliases
-  unstage = reset HEAD --
-  cancel = reset --soft HEAD^
-  export = "!f(){ git checkout-index -f -a --prefix=$1/ ;}; f"
-  discard = checkout --
-  save = commit -m
-  unsave = commit --amend
-  last = log -1 HEAD --format=format:"%Cred%H"
-  summary = status -u -s
-  new-branch = checkout -b
-  rename-branch = branch -m
-  delete-branch = branch -D
-  branches = branch -a
-  branchout = checkout -b
-  stashes = stash list
-  prestage = diff
-  precommit = diff --cached
-  remotes = remote -v
-  unstash = stash pop
-  what = show
-  ## old alias
-  st = status
-  br = branch
-  co = checkout
-  ci = commit
-  ad = add
-  ls = log --stat
-  lp = log -p
-  diffc = diff --cached
-  diffw = diff --word-diff
-  sw = switch
+	# human-git-aliases
+	unstage = reset HEAD --
+	cancel = reset --soft HEAD^
+	export = "!f(){ git checkout-index -f -a --prefix=$1/ ;}; f"
+	discard = checkout --
+	save = commit -m
+	unsave = commit --amend
+	last = log -1 HEAD --format=format:"%Cred%H"
+	summary = status -u -s
+	new-branch = checkout -b
+	rename-branch = branch -m
+	delete-branch = branch -D
+	branches = branch -a
+	branchout = checkout -b
+	stashes = stash list
+	prestage = diff
+	precommit = diff --cached
+	remotes = remote -v
+	unstash = stash pop
+	what = show
+	## old alias
+	st = status
+	br = branch
+	co = checkout
+	ci = commit
+	ad = add
+	ls = log --stat
+	lp = log -p
+	diffc = diff --cached
+	diffw = diff --word-diff
+	sw = switch
 [filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [credential]
-  helper = store --file ~/.git-credentials
+	helper = store --file ~/.git-credentials
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
