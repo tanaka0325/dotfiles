@@ -116,13 +116,8 @@ fi
 export PIPENV_VENV_IN_PROJECT=true
 
 ## go
-export GO111MODULE=on
-# export PATH="$HOME/go/bin:$PATH"
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
-export PATH="$GOROOT/bin:$PATH"
-export PATH="$PATH:$GOPATH/bin"
+export GO111MODULE=auto
+export PATH="$HOME/go/bin:$PATH"
 
 ## nodejs
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
@@ -157,12 +152,12 @@ if which fzf > /dev/null; then
   bindkey "^g" ghq-fzf
 fi
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
-
 # for starship
 eval "$(starship init zsh)"
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/hiroyuki/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/hiroyuki/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/hiroyuki/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/hiroyuki/google-cloud-sdk/completion.zsh.inc'; fi
