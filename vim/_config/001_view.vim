@@ -16,6 +16,8 @@ set wildmenu
 syntax on
 "検索結果文字列のハイライトを有効にする
 set hlsearch
+" display searched word count
+set shortmess-=S
 "オンの時は、ウインドウの幅より長い行は折り返されて表示される。
 set wrap
 "入力されているテキストの最大幅。行がそれより長くなると、改行される。0にすると無効。
@@ -35,6 +37,15 @@ set showcmd
 set ambiwidth=double
 " ルーラー表示
 set ruler
+" cursor
+if has('vim_starting')
+    " 挿入モード時に非点滅の縦棒タイプのカーソル
+    let &t_SI .= "\e[6 q"
+    " ノーマルモード時に非点滅のブロックタイプのカーソル
+    let &t_EI .= "\e[2 q"
+    " 置換モード時に非点滅の下線タイプのカーソル
+    let &t_SR .= "\e[4 q"
+endif
 
 " transparent
 "highlight Normal ctermbg=none
