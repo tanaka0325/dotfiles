@@ -1,0 +1,7 @@
+linters:
+  disable:
+    - gochecknoinits
+    - goerr113
+    - scopelint
+    - wsl
+    - gochecknoglobals
