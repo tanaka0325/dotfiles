@@ -1,21 +1,4 @@
-"updatetime
-set updatetime=100
-"文字/改行コード指定
-set fileformat=unix
-set enc=utf-8
-set fenc=utf-8
-set fencs=iso-2020-jp,utf-8,euc-jp,cp932
-set fileencoding=utf-8
-set fileencodings=ucs-bom,utf-8,euc-jp,iso-2022-jp,cp932,utf-16,utf-16le
-"検索で大文字小文字を区別しない
-set ignorecase
-"検索の時に大文字が含まれている場合は区別して検索する
-set smartcase
-"検索がファイル末尾まで行ったら、先頭から再び検索する。
-set wrapscan
-" 検索時ime停止
-set imsearch=0
-"ファイルの上書きの前にバックアップを作る。書き込みが成功してもバックアップはそのままとっておく。(有効:backup/無効:nobackup)
+"フイルの上書きの前にバックアップを作る。書き込みが成功してもバックアップはそのままとっておく。(有効:backup/無効:nobackup)
 set nobackup
 "ファイルの上書きの前にバックアップを作る。オプション'backup'がオンでない限り、バックアップは上書きに成功した後削除される。(有効:writebackup/無効:nowritebackup)
 set writebackup
@@ -23,8 +6,6 @@ set writebackup
 set hidden
 "マウスを有効にする
 set mouse=a
-" Inseerモード時にIME OFF
-set iminsert=0
 " swapを作らない
 set noswapfile
 " 同時編集しているファイルが更新された場合、追随して更新する
@@ -33,49 +14,28 @@ set autoread
 set diffopt=filler,iwhite
 " vimdiff時の不要な表示をしない
 set diffopt-=filler diffopt=iwhite,vertical
-"保存時に行末の空白を削除する
-autocmd BufWritePre * :%s/\s\+$//ge
-"閉じ括弧が入力されたとき、対応する開き括弧に僅かの間ジャンプする。
-set showmatch
-"対応する括弧の表示時間を2にする
-set matchtime=2
-"新しい行を開始したとき、現在の行とインデントを揃える
-set autoindent
-"いい感じでインデントしてくれる。
-set smartindent
-"C用のindent
-set cindent
-"<TAB>の挿入や<BS>の使用等で、<TAB>が対応する空白の数
-set softtabstop=4
-"<TAB>が対応する空白の数
-set tabstop=4
-"インデントの各段階に使われる空白の数
-set shiftwidth=4
-"Insertモードで<TAB>を入れるとき、代わりに適切な数の空白を使う
-"set expandtab
-" クリップボードに
-set clipboard+=unnamed
 " バックスペースでインデントや改行を削除できるようにする
 set backspace=indent,eol,start
-" ファイルに折りたたみがある場合、折りたたまれた状態で、ファイルを開く
-set foldlevel=0
-" 自動折返しを日本語対応
-set formatoptions+=mM
-"
-filetype plugin indent on
+" yank to clipboard
+set clipboard+=unnamed
 
 " plugins
+filetype plugin indent on
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
+
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " color scheme
-Plug 'joshdick/onedark.vim'
+" Plug 'cocopon/iceberg.vim'
+" Plug 'joshdick/onedark.vim'
+" Plug 'ghifarit53/tokyonight-vim'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 " replace
 Plug 'markonm/traces.vim'
 " comment out
@@ -84,31 +44,32 @@ Plug 'tyru/caw.vim'
 Plug 'cocopon/vaffle.vim'
 " statusline
 Plug 'itchyny/lightline.vim'
-" expand region
 " sandwich
 Plug 'machakann/vim-sandwich'
 " git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-" ruby
-Plug 'tpope/vim-endwise'
 " go
 Plug 'sebdah/vim-delve'
+Plug 'mattn/vim-goimports'
 " slim
 Plug 'slim-template/vim-slim'
 " coffee
 Plug 'kchmck/vim-coffee-script'
-
+" js
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " vim-lsp
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
-Plug 'mattn/vim-goimports'
-
+" auto close
 Plug 'mattn/vim-lexiv'
+" jump
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
 " 各種設定の読み込み
 call map(sort(split(globpath(&runtimepath, '_config/*.vim'))), {->[execute('exec "so" v:val')]})
+

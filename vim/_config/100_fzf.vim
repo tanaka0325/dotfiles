@@ -12,3 +12,9 @@ nnoremap <Leader>g :Rg<CR>
 nnoremap <Leader>t :Tags<CR>
 nnoremap <Leader>h :History<CR>
 
+let g:fzf_layout = { 'down': '100%' }
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)

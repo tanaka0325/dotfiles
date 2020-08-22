@@ -99,6 +99,10 @@ alias l='less'
 alias fig='docker-compose'
 alias np='hugo new post/$(date "+%Y%m%d%H%M%S").md'
 alias serv='python3 -m http.server'
+alias cdd='~/go/src/github.com/tanaka0325'
+
+## my cmds
+export PATH="$HOME/.mycmd:$PATH"
 
 ## rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -116,17 +120,22 @@ fi
 export PIPENV_VENV_IN_PROJECT=true
 
 ## go
-export GO111MODULE=auto
+export GO111MODULE=on
 export PATH="$HOME/go/bin:$PATH"
 
 ## nodejs
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+export N_PREFIX="$HOME/n"
+export PATH="$N_PREFIX/bin:$PATH"
 
 # android
 export ANDROID_HOME=~/Library/Android/sdk
 
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# mysql
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/opt/openssl/lib/"
 
 # fzf
 if which fzf > /dev/null; then
@@ -154,7 +163,6 @@ fi
 
 # for starship
 eval "$(starship init zsh)"
-
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/hiroyuki/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/hiroyuki/google-cloud-sdk/path.zsh.inc'; fi
