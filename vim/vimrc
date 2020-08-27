@@ -1,24 +1,3 @@
-"フイルの上書きの前にバックアップを作る。書き込みが成功してもバックアップはそのままとっておく。(有効:backup/無効:nobackup)
-set nobackup
-"ファイルの上書きの前にバックアップを作る。オプション'backup'がオンでない限り、バックアップは上書きに成功した後削除される。(有効:writebackup/無効:nowritebackup)
-set writebackup
-"バッファを切り替えてもundoの効力を失わない
-set hidden
-"マウスを有効にする
-set mouse=a
-" swapを作らない
-set noswapfile
-" 同時編集しているファイルが更新された場合、追随して更新する
-set autoread
-" diff設定
-set diffopt=filler,iwhite
-" vimdiff時の不要な表示をしない
-set diffopt-=filler diffopt=iwhite,vertical
-" バックスペースでインデントや改行を削除できるようにする
-set backspace=indent,eol,start
-" yank to clipboard
-set clipboard+=unnamed
-
 " plugins
 filetype plugin indent on
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -28,27 +7,48 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 
+"""
+" utility
+"""
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" color scheme
-" Plug 'cocopon/iceberg.vim'
-" Plug 'joshdick/onedark.vim'
-" Plug 'ghifarit53/tokyonight-vim'
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-" replace
-Plug 'markonm/traces.vim'
-" comment out
-Plug 'tyru/caw.vim'
 " filer
 Plug 'cocopon/vaffle.vim'
-" statusline
-Plug 'itchyny/lightline.vim'
 " sandwich
 Plug 'machakann/vim-sandwich'
+" auto close
+Plug 'mattn/vim-lexiv'
+" jump
+Plug 'easymotion/vim-easymotion'
+" comment out
+Plug 'tyru/caw.vim'
+" replace
+Plug 'markonm/traces.vim'
+
+"""
+" view
+"""
+" color scheme
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+" statusline
+Plug 'itchyny/lightline.vim'
+
+"""
 " git
+"""
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+
+"""
+" languages
+"""
+" vim-lsp
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+
 " go
 Plug 'sebdah/vim-delve'
 Plug 'mattn/vim-goimports'
@@ -58,18 +58,12 @@ Plug 'slim-template/vim-slim'
 Plug 'kchmck/vim-coffee-script'
 " js
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-" vim-lsp
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-" auto close
-Plug 'mattn/vim-lexiv'
-" jump
-Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
-" 各種設定の読み込み
-call map(sort(split(globpath(&runtimepath, '_config/*.vim'))), {->[execute('exec "so" v:val')]})
+" load settings
+runtime! _config/init/*.vim
+runtime! _config/plugins/*.vim
+runtime! _config/languages/*.vim
+" call map(sort(split(globpath(&runtimepath, '_config/**/*.vim'))), {->[execute('exec "so" v:val')]})
 
