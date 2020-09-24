@@ -13,7 +13,9 @@ for f in applications/*.sh; do bash "$f" -H; done
 ./symlinks.sh
 
 # chsh
-sudo chsh -s $(which zsh) vagrant
+sudo chsh -s $(which zsh) $(whoami)
+
+mkdir -p ~/tmp
 
 # done
 echo "Done: please relogin."

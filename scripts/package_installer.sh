@@ -35,21 +35,19 @@ curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh
 # vim
 ##############
 apt_install vim
+apt_install neovim
 
 ##############
 # languages
 ##############
 # ruby
 ## for ruby-build
-sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev libmysqlclient-dev -y
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
-# golang
-git clone https://github.com/syndbg/goenv.git ~/.goenv
-apt_install golang-go
-go get github.com/x-motemen/ghq
-# nodejs
-curl -L https://git.io/n-install | bash -s -- -y
+#sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev libmysqlclient-dev -y
+#curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+#curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+
+## nodejs
+#curl -L https://git.io/n-install | bash -s -- -y
 
 ##############
 # rust commands
