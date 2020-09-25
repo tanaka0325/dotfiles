@@ -124,8 +124,7 @@ export GO111MODULE=on
 export PATH="$HOME/go/bin:$PATH"
 
 ## nodejs
-export N_PREFIX="$HOME/n"
-export PATH="$N_PREFIX/bin:$PATH"
+eval "$(nodenv init -)"
 
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"

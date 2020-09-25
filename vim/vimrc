@@ -44,11 +44,17 @@ Plug 'tpope/vim-fugitive'
 " languages
 """
 " vim-lsp
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
+" if (has('nvim'))
+  " Plug 'neovim/nvim-lspconfig'
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"   Plug 'Shougo/deoplete-lsp'
+"   Plug 'lighttiger2505/deoplete-vim-lsp'
+" else
+  Plug 'prabirshrestha/asyncomplete.vim'
+  Plug 'prabirshrestha/asyncomplete-lsp.vim'
+" endif
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
-
 " go
 Plug 'sebdah/vim-delve'
 Plug 'mattn/vim-goimports'
@@ -58,6 +64,8 @@ Plug 'slim-template/vim-slim'
 Plug 'kchmck/vim-coffee-script'
 " js
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+" ts
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
@@ -67,3 +75,17 @@ runtime! _config/plugins/*.vim
 runtime! _config/languages/*.vim
 " call map(sort(split(globpath(&runtimepath, '_config/**/*.vim'))), {->[execute('exec "so" v:val')]})
 
+" if (has('nvim'))
+" lua <<EOF
+"   require'nvim_lsp'.gopls.setup{}
+" EOF
+" 
+" nnoremap <silent>gd    <cmd>lua vim.lsp.buf.declaration()<CR>
+" nnoremap <silent><c-]> <cmd>lua vim.lsp.buf.definition()<CR>
+" nnoremap <silent>K     <cmd>lua vim.lsp.buf.hover()<CR>
+" 
+" let g:deoplete#enable_at_startup = 1
+" endif
+" if (has('nvim'))
+"   let g:deoplete#enable_at_startup = 1
+" endif
