@@ -127,9 +127,6 @@ export PATH="$HOME/go/bin:$PATH"
 export N_PREFIX="$HOME/n"
 export PATH="$N_PREFIX/bin:$PATH"
 
-# android
-export ANDROID_HOME=~/Library/Android/sdk
-
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -164,8 +161,14 @@ fi
 # for starship
 eval "$(starship init zsh)"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/hiroyuki/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/hiroyuki/google-cloud-sdk/path.zsh.inc'; fi
+# for docker
+if [ `uname -s` = "Linux" ]; then
+  export LD_LIBRARY_PATH=/usr/lib
+fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/hiroyuki/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/hiroyuki/google-cloud-sdk/completion.zsh.inc'; fi
+if [ `uname -s` = "Darwin" ]; then
+  # The next line updates PATH for the Google Cloud SDK.
+  if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
+  # The next line enables shell command completion for gcloud.
+  if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
+fi
