@@ -124,6 +124,7 @@ export GO111MODULE=on
 export PATH="$HOME/go/bin:$PATH"
 
 ## nodejs
+export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
 # cargo
