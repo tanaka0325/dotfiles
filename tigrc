@@ -1,5 +1,7 @@
 # display commit-hash in main view
-set main-view = id date author:email-user commit-title:graph=yes,refs=yes
+set main-view = id date:custom author:email-user commit-title:graph=yes,refs=yes
+# change view date format
+set main-view-date-format = "%Y-%m-%d %H:%M"
 
 # keymaps
 ## move to first line
