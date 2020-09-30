@@ -12,9 +12,6 @@ call plug#begin('~/.vim/plugged')
 """
 " ctrl-p
 Plug 'ctrlpvim/ctrlp.vim'
-" fzf
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim'
 " filer
 Plug 'cocopon/vaffle.vim'
 " sandwich
