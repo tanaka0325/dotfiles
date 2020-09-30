@@ -17,4 +17,6 @@ endif
 " keymap
 nnoremap <Leader>f :CtrlP<CR>
 nnoremap <Leader>h :CtrlPMRU<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <C-r> :CtrlPMRU<CR>
+
