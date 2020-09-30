@@ -1,0 +1,15 @@
+# display commit-hash in main view
+set main-view = id date author:email-user commit-title:graph=yes,refs=yes
+
+# keymaps
+## move to first line
+bind generic g move-first-line
+bind generic E view-grep
+## move to last line
+bind generic G move-last-line
+bind main G move-last-line
+## scroll a page
+bind generic <Ctrl-f> scroll-page-down
+bind generic <Ctrl-b> scroll-page-up
+## reload
+bind generic <Ctrl-r> refresh
