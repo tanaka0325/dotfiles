@@ -8,7 +8,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
 " jump
-nmap <c-]> :LspDefinition<CR>
+nnoremap <c-]> :LspDefinition<CR>
 nnoremap <Leader>] :LspDefinition<CR>
 nnoremap <Leader>i :LspImplementation<CR>
 nnoremap <Leader>r :LspReferences<CR>
