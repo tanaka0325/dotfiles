@@ -15,8 +15,8 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " goimports
-autocmd BufWritePre *.go :call CocAction('organizeImport')
+" autocmd BufWritePre *.go :call CocAction('organizeImport')
 
 " prettier
 command! -nargs=0 Format :call CocAction('format')
-autocmd FileType javascript,typescript,typescript.tsx nnoremap <buffer> <Leader>a :Format<CR>
+autocmd FileType javascript,typescript,typescript.tsx,css,scss nnoremap <buffer> <Leader>a :Format<CR>

@@ -44,6 +44,7 @@ Plug 'tpope/vim-fugitive'
 """
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sebdah/vim-delve'
+Plug 'mattn/vim-goimports'
 " slim
 Plug 'slim-template/vim-slim'
 " coffee
