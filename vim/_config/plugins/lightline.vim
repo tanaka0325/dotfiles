@@ -2,8 +2,6 @@ if empty(globpath(&rtp, 'autoload/lightline.vim'))
   finish
 endif
 
-let g:lightline = { 'colorscheme': 'material_vim' }
-
 let g:lightline.active = {
     \ 'left': [['mode', 'paste', 'modified'],
     \          ['readonly', 'relativepath', 'modified']]}

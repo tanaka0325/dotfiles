@@ -29,7 +29,8 @@ Plug 'markonm/traces.vim'
 " view
 """
 " color scheme
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+" Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'ghifarit53/tokyonight-vim'
 " statusline
 Plug 'itchyny/lightline.vim'
 
