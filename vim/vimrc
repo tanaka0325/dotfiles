@@ -39,6 +39,8 @@ Plug 'itchyny/lightline.vim'
 """
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'iberianpig/tig-explorer.vim'
+Plug 'rbgrouleff/bclose.vim'
 
 """
 " languages
