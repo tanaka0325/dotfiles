@@ -11,7 +11,10 @@ call plug#begin('~/.vim/plugged')
 " utility
 """
 " ctrl-p
-Plug 'ctrlpvim/ctrlp.vim'
+" fzf
+" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 " filer
 Plug 'cocopon/vaffle.vim'
 " sandwich
@@ -39,6 +42,7 @@ Plug 'itchyny/lightline.vim'
 """
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+" tig
 Plug 'iberianpig/tig-explorer.vim'
 Plug 'rbgrouleff/bclose.vim'
 
