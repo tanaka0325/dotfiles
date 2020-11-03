@@ -55,6 +55,7 @@ set shiftwidth=4
 """
 " display line number
 set number
+" set relativenumber
 " display invisible char
 set list
 set listchars=tab:>-,trail:-

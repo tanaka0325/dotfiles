@@ -18,7 +18,7 @@ Plug 'junegunn/fzf.vim'
 " filer
 Plug 'cocopon/vaffle.vim'
 " sandwich
-Plug 'machakann/vim-sandwich'
+" Plug 'machakann/vim-sandwich'
 " auto close
 Plug 'mattn/vim-lexiv'
 " jump
