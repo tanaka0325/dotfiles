@@ -40,8 +40,8 @@ zinit wait lucid atload"zicompinit; zicdreplay" blockf for zsh-users/zsh-complet
 export FZF_DEFAULT_OPTS='--height 80% --reverse --border'
 
 ## Editor
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export PAGER='less'
 
 ## Autocmplete
