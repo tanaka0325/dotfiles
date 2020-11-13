@@ -91,6 +91,7 @@ setopt auto_cd
 setopt extended_glob
 
 ## Alias
+alias nv="nvim"
 alias rm="rm -i"
 alias ls="exa"
 alias ll="exa -lha"
@@ -99,7 +100,7 @@ alias l='less'
 alias fig='docker-compose'
 alias np='hugo new post/$(date "+%Y%m%d%H%M%S").md'
 alias serv='python3 -m http.server'
-alias cdd='~/go/src/github.com/tanaka0325'
+alias cdd='cd ~/dotfiles'
 
 ## my cmds
 export PATH="$HOME/.mycmd:$PATH"

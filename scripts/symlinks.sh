@@ -11,6 +11,6 @@ ln -sf ~/dotfiles/nvim ~/.config/nvim
 
 # git diff-highlight
 # TODO: for mac
-sudo ln -s /usr/share/doc/git/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
-sudo chmod +x /usr/local/bin/diff-highlight
+# sudo ln -s /usr/share/doc/git/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
+# sudo chmod +x /usr/local/bin/diff-highlight
 

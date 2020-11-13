@@ -1,4 +1,4 @@
-VER=1.15.2
+VER=1.15.5
 
 # go
 curl -L "https://golang.org/dl/go$VER.linux-amd64.tar.gz" -o ~/tmp/go$VER.tar.gz
