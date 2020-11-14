@@ -173,8 +173,10 @@ fi
 
 # for clipboard
 if [ `uname -s` = "Linux" ]; then
-  Xvfb -screen 0 1280x720x24 &
-  export DISPLAY=:0
+  if [ -z "$DISPLAY" ]; then
+    Xvfb -screen 0 1280x720x24 &
+    export DISPLAY=:0
+  fi
 fi
 
 if [ `uname -s` = "Darwin" ]; then
