@@ -171,13 +171,20 @@ if [ `uname -s` = "Linux" ]; then
   export LD_LIBRARY_PATH=/usr/lib
 fi
 
-# for clipboard
+# clipboard for virtualbox
 if [ `uname -s` = "Linux" ]; then
-  count=`ps -ef | grep Xvfb | grep -v grep | wc -l`
-  if [ $count = 0 ]; then
-    Xvfb -screen 0 1280x720x24 &
-    export DISPLAY=:0
-    echo "start Xvfb screen"
+  if `which VBoxClient`; then
+    sccount=`ps -ef | grep Xvfb | grep -v grep | wc -l`
+    if [ $scount = 0 ]; then
+      Xvfb -screen 0 1280x720x24 &
+      export DISPLAY=:0
+      echo "start Xvfb screen"
+    fi
+
+    vcount=`ps -ef | grep VBoxClient | grep -v grep | wc -l`
+    if [ $vcount = 0 ]; then
+      VBoxClient --clipboard
+    fi
   fi
 fi
 
