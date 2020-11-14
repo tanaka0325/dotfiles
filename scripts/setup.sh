@@ -6,15 +6,13 @@ cd `dirname $0`
 # install packages
 ./package_installer.sh
 
-# install other applications
-for f in applications/*.sh; do bash "$f" -H; done
-
 # create symlinks
 ./symlinks.sh
 
 # chsh
 sudo chsh -s $(which zsh) $(whoami)
 
+# create directories
 mkdir -p ~/tmp
 
 # done

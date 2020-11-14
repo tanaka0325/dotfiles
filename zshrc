@@ -171,7 +171,7 @@ fi
 if [ `uname -s` = "Linux" ]; then
   Xvfb -screen 0 1280x720x24 &
   export DISPLAY=:0
-end
+fi
 
 if [ `uname -s` = "Darwin" ]; then
   # The next line updates PATH for the Google Cloud SDK.
