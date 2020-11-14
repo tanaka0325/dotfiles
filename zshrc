@@ -93,14 +93,19 @@ setopt extended_glob
 ## Alias
 alias nv="nvim"
 alias rm="rm -i"
-alias ls="exa"
-alias ll="exa -lha"
-alias tree="exa -T"
 alias l='less'
 alias fig='docker-compose'
 alias np='hugo new post/$(date "+%Y%m%d%H%M%S").md'
 alias serv='python3 -m http.server'
 alias cdd='cd ~/dotfiles'
+if [ `uname -s` = 'Darwin' ]; then
+    alias ls='ls -G'
+    alias ll='ls -lhaG'
+else
+    eval `dircolors ~/.colorrc`
+    alias ls='ls --color=auto'
+    alias ll='ls --color=auto -lha'
+fi
 
 ## my cmds
 export PATH="$HOME/.mycmd:$PATH"

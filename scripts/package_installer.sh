@@ -56,6 +56,6 @@ apt_install neovim
 apt_install cargo
 apt_install fd-find
 apt_install bat
-cargo install exa procs ripgrep
+apt_install ripgrep
 sudo ln -s /usr/bin/batcat /usr/local/bin/bat
 
