@@ -4,8 +4,6 @@ VER=1.15.5
 curl -L "https://golang.org/dl/go$VER.linux-amd64.tar.gz" -o $HOME/tmp/go$VER.tar.gz
 tar -C $HOME/ -xzf $HOME/tmp/go$VER.tar.gz
 
-source $HOME/.zshrc
-
 # ghq
-go get github.com/x-motemen/ghq
+$HOME/go/bin/go get github.com/x-motemen/ghq
 
