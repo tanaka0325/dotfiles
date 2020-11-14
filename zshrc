@@ -173,9 +173,11 @@ fi
 
 # for clipboard
 if [ `uname -s` = "Linux" ]; then
-  if [ -z "$DISPLAY" ]; then
+  count=`ps -ef | grep Xvfb | grep -v grep | wc -l`
+  if [ $count = 0 ]; then
     Xvfb -screen 0 1280x720x24 &
     export DISPLAY=:0
+    echo "start Xvfb screen"
   fi
 fi
 
