@@ -3,6 +3,9 @@
 # move working directory
 cd `dirname $0`
 
+# create directories
+mkdir -p ~/tmp
+
 # install packages
 ./package_installer.sh
 
@@ -11,9 +14,6 @@ cd `dirname $0`
 
 # chsh
 sudo chsh -s $(which zsh) $(whoami)
-
-# create directories
-mkdir -p ~/tmp
 
 # done
 echo "Done: please relogin."

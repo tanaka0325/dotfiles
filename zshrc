@@ -102,7 +102,6 @@ if [ `uname -s` = 'Darwin' ]; then
     alias ls='ls -G'
     alias ll='ls -lhaG'
 else
-    eval `dircolors ~/.colorrc`
     alias ls='ls --color=auto'
     alias ll='ls --color=auto -lha'
 fi

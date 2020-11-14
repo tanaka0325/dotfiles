@@ -12,3 +12,4 @@ mkdir -p "$(nodenv root)"/plugins
 git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
 
 nodenv install $VER
+nodenv global $VER
