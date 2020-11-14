@@ -36,7 +36,11 @@ set shortmess-=S
 " enable to remove below by backspace
 set backspace=indent,eol,start
 " yank to clipboard
-set clipboard+=unnamed
+if has('mac')
+  set clipboard+=unnamed
+else
+  set clipboard+=unnamedplus
+endif
 
 """
 " indent

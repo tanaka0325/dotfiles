@@ -20,6 +20,9 @@ apt_install build-essential
 apt_install git
 apt_install fzf
 apt_install tmux
+apt_install tig
+apt_install xclip
+apt_install xvfb
 
 ##############
 # zsh
@@ -30,6 +33,7 @@ apt_install zsh
 curl -fsSL https://starship.rs/install.sh | sudo bash -s -- -y
 # zinit
 curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh | bash -s -- -y
+zinit self-update
 
 ##############
 # vim

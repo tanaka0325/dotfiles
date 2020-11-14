@@ -167,6 +167,12 @@ if [ `uname -s` = "Linux" ]; then
   export LD_LIBRARY_PATH=/usr/lib
 fi
 
+# for clipboard
+if [ `uname -s` = "Linux" ]; then
+  Xvfb -screen 0 1280x720x24 &
+  export DISPLAY=:0
+end
+
 if [ `uname -s` = "Darwin" ]; then
   # The next line updates PATH for the Google Cloud SDK.
   if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
