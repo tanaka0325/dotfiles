@@ -56,7 +56,7 @@ apt_install cargo
 apt_install fd-find
 apt_install bat
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb
-ripgrep_12.1.1_amd64.deb
+sudo dpkg -i ripgrep_12.1.1_amd64.deb
 apt_install ripgrep
 sudo ln -s /usr/bin/batcat /usr/local/bin/bat
 
