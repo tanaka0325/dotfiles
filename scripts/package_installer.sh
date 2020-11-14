@@ -56,6 +56,9 @@ apt_install neovim
 apt_install cargo
 apt_install fd-find
 apt_install bat
+RGVER=12.1.1
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/$RGVER/ripgrep_$RGVER_amd64.deb
+ripgrep_$RGVER_amd64.deb
 apt_install ripgrep
 sudo ln -s /usr/bin/batcat /usr/local/bin/bat
 
