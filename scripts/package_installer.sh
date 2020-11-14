@@ -33,7 +33,6 @@ apt_install zsh
 curl -fsSL https://starship.rs/install.sh | sudo bash -s -- -y
 # zinit
 curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh | bash -s -- -y
-zinit self-update
 
 ##############
 # vim
@@ -56,9 +55,8 @@ apt_install neovim
 apt_install cargo
 apt_install fd-find
 apt_install bat
-RGVER=12.1.1
-curl -LO https://github.com/BurntSushi/ripgrep/releases/download/$RGVER/ripgrep_$RGVER_amd64.deb
-ripgrep_$RGVER_amd64.deb
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb
+ripgrep_12.1.1_amd64.deb
 apt_install ripgrep
 sudo ln -s /usr/bin/batcat /usr/local/bin/bat
 
