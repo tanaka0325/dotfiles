@@ -93,11 +93,11 @@ setopt extended_glob
 ## Alias
 alias nv="nvim"
 alias rm="rm -i"
-alias l='less'
 alias fig='docker-compose'
 alias np='hugo new post/$(date "+%Y%m%d%H%M%S").md'
 alias serv='python3 -m http.server'
 alias cdd='cd ~/dotfiles'
+alias vg='vagrant'
 if [ `uname -s` = 'Darwin' ]; then
     alias ls='ls -G'
     alias ll='ls -lhaG'
@@ -173,18 +173,16 @@ fi
 
 # clipboard for virtualbox
 if [ `uname -s` = "Linux" ]; then
-  if `which VBoxClient`; then
-    sccount=`ps -ef | grep Xvfb | grep -v grep | wc -l`
-    if [ $scount = 0 ]; then
-      Xvfb -screen 0 1280x720x24 &
-      export DISPLAY=:0
-      echo "start Xvfb screen"
-    fi
+  sccount=`ps -ef | grep Xvfb | grep -v grep | wc -l`
+  if [ $scount = 0 ]; then
+    Xvfb -screen 0 1280x720x24 &
+    export DISPLAY=:0
+    echo "start Xvfb screen"
+  fi
 
-    vcount=`ps -ef | grep VBoxClient | grep -v grep | wc -l`
-    if [ $vcount = 0 ]; then
-      VBoxClient --clipboard
-    fi
+  vcount=`ps -ef | grep VBoxClient | grep -v grep | wc -l`
+  if [ $vcount = 0 ]; then
+    VBoxClient --clipboard
   fi
 fi
 
