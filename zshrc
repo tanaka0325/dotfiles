@@ -173,15 +173,13 @@ fi
 
 # clipboard for virtualbox
 if [ `uname -s` = "Linux" ]; then
-  sccount=`ps -ef | grep Xvfb | grep -v grep | wc -l`
-  if [ $scount = 0 ]; then
+  if [ `ps -ef | grep Xvfb | grep -v grep | wc -l` ]; then
     Xvfb -screen 0 1280x720x24 &
     export DISPLAY=:0
     echo "start Xvfb screen"
   fi
 
-  vcount=`ps -ef | grep VBoxClient | grep -v grep | wc -l`
-  if [ $vcount = 0 ]; then
+  if [ `ps -ef | grep VBoxClient | grep -v grep | wc -l` ];then
     VBoxClient --clipboard
   fi
 fi
