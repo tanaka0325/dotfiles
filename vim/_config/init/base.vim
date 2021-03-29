@@ -59,7 +59,7 @@ set shiftwidth=4
 """
 " display line number
 set number
-" set relativenumber
+set relativenumber
 " display invisible char
 set list
 set listchars=tab:>-,trail:-
@@ -69,6 +69,8 @@ set wildmenu
 set cursorline
 " display statusline always
 set laststatus=2
+" update time
+set updatetime=250
 
 """
 " termguicolors
