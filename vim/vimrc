@@ -32,7 +32,6 @@ Plug 'markonm/traces.vim'
 " view
 """
 " color scheme
-" Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'ghifarit53/tokyonight-vim'
 " statusline
 Plug 'itchyny/lightline.vim'
@@ -49,27 +48,27 @@ Plug 'rbgrouleff/bclose.vim'
 """
 " language server
 """
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
-Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-solargraph', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
-Plug 'honza/vim-snippets'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc-solargraph', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'honza/vim-snippets'
+
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
 """
 " languages
 """
 " go
 Plug 'sebdah/vim-delve'
 Plug 'mattn/vim-goimports'
-" slim
-Plug 'slim-template/vim-slim'
-" coffee
-Plug 'kchmck/vim-coffee-script'
-" ts
-Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
