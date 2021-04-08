@@ -32,18 +32,9 @@ augroup lsp_install
 augroup END
 
 " tab completion
-" inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-" inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
-
-" jump
-" nnoremap <c-]> :LspDefinition<CR>
-" nnoremap <Leader>] :LspDefinition<CR>
-" nnoremap <Leader>i :LspImplementation<CR>
-" nnoremap <Leader>r :LspReferences<CR>
-
-" format
-" nnoremap <Leader>a :LspDocumentFormatSync<CR>
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
 " auto popup
 let g:lsp_signs_enabled = 1
@@ -52,7 +43,7 @@ let g:asyncomplete_auto_popup = 1
 let g:asyncomplete_auto_completeopt = 0
 let g:asyncomplete_popup_delay = 200
 
-let g:lsp_text_edit_enabled = 0
+let g:lsp_text_edit_enabled = 1
 let g:lsp_documentation_float = 1
 let g:lsp_preview_float = 1
 let g:lsp_diagnostics_float_cursor = 1
@@ -60,6 +51,12 @@ let g:lsp_preview_autoclose = 1
 
 " for go
 let g:lsp_settings_filetype_go = ['gopls', 'golangci-lint-langserver']
+let g:lsp_settings = {
+      \  'gopls': {
+      \    'buildFlags': "-tags=parallel,serial,e2e",
+      \  },
+      \}
+
 
 " for log
 " let g:lsp_log_verbose = 1

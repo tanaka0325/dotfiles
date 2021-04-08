@@ -29,6 +29,8 @@ set wrapscan
 set hlsearch
 " display searched word count
 set shortmess-=S
+" enable incremental search
+set incsearch
 
 """
 " key
