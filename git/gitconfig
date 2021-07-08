@@ -4,7 +4,7 @@
 [github]
 	user = tanaka0325
 [core]
-	editor = nvim
+	editor = vim
 	excludesfile = ~/.gitignore_global
 	autoCRLF = false
 	quotepath = false
