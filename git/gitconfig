@@ -4,7 +4,7 @@
 [github]
 	user = tanaka0325
 [core]
-	editor = nvim
+	editor = vim
 	excludesfile = ~/.gitignore_global
 	autoCRLF = false
 	quotepath = false
@@ -48,6 +48,7 @@
 	diffc = diff --cached
 	diffw = diff --word-diff
 	sw = switch
+	wk = worktree
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
