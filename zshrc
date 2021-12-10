@@ -40,8 +40,8 @@ zinit wait lucid atload"zicompinit; zicdreplay" blockf for zsh-users/zsh-complet
 export FZF_DEFAULT_OPTS='--height 80% --reverse --border'
 
 ## Editor
-export EDITOR='nvim'
-export VISUAL='nvim'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 ## Autocmplete
@@ -91,53 +91,16 @@ setopt auto_cd
 setopt extended_glob
 
 ## Alias
-alias nv="nvim"
-alias rm="rm -i"
-alias fig='docker-compose'
 alias np='hugo new post/$(date "+%Y%m%d%H%M%S").md'
-alias serv='python3 -m http.server'
-alias cdd='cd ~/dotfiles'
-alias vg='vagrant'
-if [ `uname -s` = 'Darwin' ]; then
-    alias ls='ls -G'
-    alias ll='ls -lhaG'
-else
-    alias ls='ls --color=auto'
-    alias ll='ls --color=auto -lha'
-fi
-
-## my cmds
-export PATH="$HOME/.mycmd:$PATH"
-
-## rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-if which rbenv > /dev/null; then
-  eval "$(rbenv init -)";
-fi
-
-## pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
-if which pyenv > /dev/null; then
-  eval "$(pyenv init -)"
-fi
-
-## pipenv
-export PIPENV_VENV_IN_PROJECT=true
+alias rm="rm -i"
+alias ls="ls -G"
 
 ## go
 export GO111MODULE=on
 export PATH="$HOME/go/bin:$PATH"
 
-## nodejs
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
-
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"
-
-# mysql
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/opt/openssl/lib/"
 
 # fzf
 if which fzf > /dev/null; then
@@ -166,27 +129,7 @@ fi
 # for starship
 eval "$(starship init zsh)"
 
-# for docker
-if [ `uname -s` = "Linux" ]; then
-  export LD_LIBRARY_PATH=/usr/lib
-fi
-
-# clipboard for virtualbox
-if [ `uname -s` = "Linux" ]; then
-  if [ `ps -ef | grep Xvfb | grep -v grep | wc -l` ]; then
-    Xvfb -screen 0 1280x720x24 &
-    export DISPLAY=:0
-    echo "start Xvfb screen"
-  fi
-
-  if [ `ps -ef | grep VBoxClient | grep -v grep | wc -l` ];then
-    VBoxClient --clipboard
-  fi
-fi
-
-if [ `uname -s` = "Darwin" ]; then
-  # The next line updates PATH for the Google Cloud SDK.
-  if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
-  # The next line enables shell command completion for gcloud.
-  if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
+# read local seting
+if [ -e $HOME/.zshrc_local ]; then
+  source $HOME/.zshrc_local
 fi

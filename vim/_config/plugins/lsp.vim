@@ -52,11 +52,16 @@ let g:lsp_preview_autoclose = 1
 " for go
 let g:lsp_settings_filetype_go = ['gopls', 'golangci-lint-langserver']
 let g:lsp_settings = {
-      \  'gopls': {
-      \    'buildFlags': "-tags=parallel,serial,e2e",
-      \  },
-      \}
-
+\   'gopls': {
+\     'workspace_config': {
+\       'gopls': {
+\         'env': {
+\           'GOFLAGS': '-tags=parallel,serial,e2e'
+\         },
+\       },
+\     },
+\   },
+\ }
 
 " for log
 " let g:lsp_log_verbose = 1
