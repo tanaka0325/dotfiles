@@ -22,7 +22,7 @@ Plug 'cocopon/vaffle.vim'
 " auto close
 Plug 'mattn/vim-lexiv'
 " jump
-Plug 'easymotion/vim-easymotion'
+" Plug 'easymotion/vim-easymotion'
 " comment out
 Plug 'tyru/caw.vim'
 " replace
@@ -58,7 +58,7 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 " languages
 """
 " go
-Plug 'sebdah/vim-delve'
+" Plug 'sebdah/vim-delve'
 Plug 'mattn/vim-goimports'
 
 call plug#end()

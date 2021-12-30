@@ -21,8 +21,8 @@ apt_install git
 apt_install fzf
 apt_install tmux
 apt_install tig
-apt_install xclip
-apt_install xvfb
+#apt_install xclip
+#apt_install xvfb
 
 ##############
 # zsh
@@ -52,11 +52,11 @@ apt_install neovim
 ##############
 # rust commands
 ##############
-apt_install cargo
-apt_install fd-find
-apt_install bat
-curl -L https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb -o $HOME/tmp/ripgrep_12.1.1_amd64.deb
-sudo dpkg -i $HOME/tmp/ripgrep_12.1.1_amd64.deb
-apt_install ripgrep
-sudo ln -s /usr/bin/batcat /usr/local/bin/bat
-
+#apt_install cargo
+#apt_install fd-find
+#apt_install bat
+#curl -L https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb -o $HOME/tmp/ripgrep_12.1.1_amd64.deb
+#sudo dpkg -i $HOME/tmp/ripgrep_12.1.1_amd64.deb
+#apt_install ripgrep
+#sudo ln -s /usr/bin/batcat /usr/local/bin/bat
+#

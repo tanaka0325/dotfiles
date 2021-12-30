@@ -55,9 +55,12 @@
 	process = git-lfs filter-process
 	required = true
 [credential]
-	helper = store --file ~/.git-credentials
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+	#helper = store --file ~/.git-credentials
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
 [mergetool]
 	prompt = false
+[url "git@github.com:"]
+	insteadOf = https://github.com

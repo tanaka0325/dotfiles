@@ -47,7 +47,7 @@ endif
 if system('uname -a | grep microsoft') != ''
   augroup myYank
     autocmd!
-    autocmd TextYankPost * :call system('clip.exe', @")
+    autocmd TextYankPost * :call system('/mnt/c/Windows/System32/clip.exe', @")
   augroup END
 endif
 
@@ -81,6 +81,16 @@ set laststatus=2
 " update time
 set updatetime=250
 
+
+if has('vim_starting')
+  " vertical line for insert mode
+  let &t_SI .= "\e[6 q"
+  " block cursor for normal mode 
+  let &t_EI .= "\e[2 q"
+  " under_bar for replace mode
+  let &t_SR .= "\e[4 q"
+endif
+
 """
 " termguicolors
 """
@@ -89,5 +99,7 @@ if (has('nvim'))
 endif
 if (has('termguicolors'))
   set termguicolors
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 

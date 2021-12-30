@@ -94,6 +94,13 @@ setopt extended_glob
 alias np='hugo new post/$(date "+%Y%m%d%H%M%S").md'
 alias rm="rm -i"
 alias ls="ls -G"
+if [ `uname -s` = 'Darwin' ]; then
+    alias ls='ls -G'
+    alias ll='ls -lhaG'
+else
+    alias ls='ls --color=auto'
+    alias ll='ls --color=auto -lha'
+fi
 
 ## go
 export GO111MODULE=on
@@ -101,6 +108,10 @@ export PATH="$HOME/go/bin:$PATH"
 
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# mysql
+#export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+#export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/opt/openssl/lib/"
 
 # fzf
 if which fzf > /dev/null; then
