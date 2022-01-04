@@ -28,10 +28,17 @@ vim.o.emoji = true
 
 --[[ yank ]]
 -- yank to clipboard
-if vim.fn.has('mac') then
+if vim.loop.os_uname().sysname == 'Darwin' then
 	vim.o.clipboard = 'unnamed'
 else
 	vim.o.clipboard = 'unnamedplus'
+end
+-- for wsl
+if vim.fn.system('uname -a | grep microsoft') ~= '' then
+	vim.cmd [[augroup myYank
+		autocmd!
+		autocmd TextYankPost * :call system('/mnt/c/Windows/System32/clip.exe', @")
+	augroup END]]
 end
 
 -- How do I disable netrw when invoked with `$ nvim /path/to/directory` ?
