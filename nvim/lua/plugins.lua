@@ -32,26 +32,30 @@ return require('packer').startup(function()
 		config = 'require("plugins.caw")',
 	}
 
-	-- color scheme
+	-- colorscheme
 	use {
-		'folke/tokyonight.nvim',
-		config = function()
-			vim.g.tokyonight_style = 'night'
-			vim.cmd [[ colorscheme tokyonight ]]
-		end,
-	}
-	-- statusline
-	use {
-		'nvim-lualine/lualine.nvim',
-		requires = {
-			{ 'folke/tokyonight.nvim', opt = true },
-			{ 'kyazdani42/nvim-web-devicons' },
+		{
+			'rmehri01/onenord.nvim',
+			-- 'folke/tokyonight.nvim',
+			-- 'cocopon/iceberg.vim',
+			-- 'EdenEast/nightfox.nvim',
+			-- 'bluz71/vim-nightfly-guicolors',
+			-- 'rafamadriz/neon',
+			config = function()
+				vim.cmd [[ colorscheme onenord ]]
+			end,
 		},
-		config = function() require('lualine').setup {
-			options = {
-				theme = 'auto',
+		{
+			'nvim-lualine/lualine.nvim',
+			requires = {
+				{ 'kyazdani42/nvim-web-devicons' },
 			},
-		}end,
+			config = function() require('lualine').setup {
+				options = {
+					theme = 'onenord',
+				},
+			}end,
+		}
 	}
 
 	-- git
