@@ -66,10 +66,12 @@ cmp.setup.cmdline(':', {
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+-- go
 nvim_lsp.gopls.setup{
 	on_attach = on_attach,
 	capabilities = capabilities,
 }
+-- lua
 nvim_lsp.sumneko_lua.setup{
 	on_attach = on_attach,
 	capabilities = capabilities,
@@ -80,4 +82,9 @@ nvim_lsp.sumneko_lua.setup{
 			}
 		}
 	},
+}
+-- yamlls
+nvim_lsp.yamlls.setup{
+	on_attach = on_attach,
+	capabilities = capabilities,
 }
