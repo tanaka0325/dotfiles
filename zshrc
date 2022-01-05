@@ -141,6 +141,6 @@ fi
 eval "$(starship init zsh)"
 
 # read local seting
-if [ -e $HOME/.zshrc_local ]; then
-  source $HOME/.zshrc_local
+if [ -e $HOME/.zshrc.local ]; then
+  source $HOME/.zshrc.local
 fi
