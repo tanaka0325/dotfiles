@@ -88,3 +88,8 @@ nvim_lsp.yamlls.setup{
 	on_attach = on_attach,
 	capabilities = capabilities,
 }
+-- bashls
+nvim_lsp.bashls.setup{
+	on_attach = on_attach,
+	capabilities = capabilities,
+}
