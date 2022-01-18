@@ -2,7 +2,7 @@ local nvim_lsp = require('lspconfig')
 
 local on_attach = function(_, bufnr)
 	local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-	local opts = { noremap=true, silent=true }
+	local opts = { noremap=true }
 
 	-- keymaps
 	buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
@@ -70,6 +70,14 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 nvim_lsp.gopls.setup{
 	on_attach = on_attach,
 	capabilities = capabilities,
+	cmd = {"gopls", "serve"},
+	settings = {
+		gopls = {
+			env = {
+				GOFLAGS = '-tags=parallel,serial,e2e',
+			}
+		}
+	},
 }
 -- lua
 nvim_lsp.sumneko_lua.setup{
@@ -90,6 +98,11 @@ nvim_lsp.yamlls.setup{
 }
 -- bashls
 nvim_lsp.bashls.setup{
+	on_attach = on_attach,
+	capabilities = capabilities,
+}
+-- php
+nvim_lsp.intelephense.setup{
 	on_attach = on_attach,
 	capabilities = capabilities,
 }
