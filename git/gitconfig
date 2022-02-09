@@ -59,7 +59,7 @@
 	#helper = store --file ~/.git-credentials
 [merge]
 	tool = vimdiff
-	conflictstyle = diff3
+	conflictstyle = zdiff3
 [mergetool]
 	prompt = false
 [url "git@github.com:"]
