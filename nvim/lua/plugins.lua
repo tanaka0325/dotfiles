@@ -50,11 +50,7 @@ return require('packer').startup(function()
 			requires = {
 				{ 'kyazdani42/nvim-web-devicons' },
 			},
-			config = function() require('lualine').setup {
-				options = {
-					theme = 'onenord',
-				},
-			}end,
+			config = 'require("plugins.lualine")',
 		}
 	}
 
