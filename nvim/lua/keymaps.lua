@@ -18,6 +18,6 @@ vim.api.nvim_set_keymap('i', '<C-b>', '<Left>', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('i', '<C-e>', '<Esc>A', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-a>', '<Esc>I', { noremap = true, silent = true })
 -- quit terminal insert mode
-vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
 -- start with insert mode when entering terminal mode
 vim.cmd [[autocmd TermOpen * startinsert]]
