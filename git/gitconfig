@@ -66,3 +66,5 @@
 	insteadOf = https://github.com/
 [include]
 	path = ~/.gitconfig.local
+[pull]
+	ff = only
