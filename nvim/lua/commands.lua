@@ -1,2 +1,7 @@
 -- autotrim unused spaces at the end of line on save
-vim.cmd [[au BufWritePre * :%s/\s\+$//e]]
+vim.cmd([[
+	augroup trim-unsused-spaces
+		autocmd!
+		autocmd BufWritePre * :%s/\s\+$//e
+	augroup END
+]])
