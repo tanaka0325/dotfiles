@@ -1,3 +1,9 @@
 vim/plugged
 vim/autoload
 *.local
+
+# zsh
+zsh/.zim
+zsh/.zcompdump
+zsh/.zcompdump.zwc
+zsh/.zimrc
