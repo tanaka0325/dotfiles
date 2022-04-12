@@ -37,6 +37,7 @@
 	remotes = remote -v
 	unstash = stash pop
 	what = show
+	graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
 	## old alias
 	st = status
 	br = branch
