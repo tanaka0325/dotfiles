@@ -35,14 +35,13 @@ return require('packer').startup(function()
 	-- colorscheme
 	use {
 		{
-			'rmehri01/onenord.nvim',
+			-- 'rmehri01/onenord.nvim',
 			-- 'folke/tokyonight.nvim',
-			-- 'cocopon/iceberg.vim',
-			-- 'EdenEast/nightfox.nvim',
-			-- 'bluz71/vim-nightfly-guicolors',
-			-- 'rafamadriz/neon',
+			'EdenEast/nightfox.nvim',
 			config = function()
-				vim.cmd [[ colorscheme onenord ]]
+				-- vim.cmd [[ colorscheme onenord ]]
+				-- vim.cmd [[ colorscheme tokyonight ]]
+				vim.cmd [[ colorscheme nightfox ]]
 			end,
 		},
 		{
