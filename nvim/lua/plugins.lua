@@ -12,6 +12,9 @@ return require('packer').startup(function()
 	-- plugin manager
 	use { 'wbthomason/packer.nvim', opt = true }
 
+	-- easymotion
+	use { 'easymotion/vim-easymotion' }
+
 	-- filer
 	use {
 		'tamago324/lir.nvim',
