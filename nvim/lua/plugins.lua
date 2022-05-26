@@ -13,7 +13,10 @@ return require('packer').startup(function()
 	use { 'wbthomason/packer.nvim', opt = true }
 
 	-- easymotion
-	use { 'easymotion/vim-easymotion' }
+	use {
+		'easymotion/vim-easymotion',
+		config = 'require("plugins.easymotion")',
+	}
 
 	-- filer
 	use {
