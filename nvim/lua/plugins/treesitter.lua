@@ -11,8 +11,6 @@ require'nvim-treesitter.configs'.setup {
 		"make",
 		"markdown",
 		"php",
-		-- "python",
-		-- "ruby",
 		"toml",
 		"typescript",
 		"vim",
