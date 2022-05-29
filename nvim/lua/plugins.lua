@@ -12,10 +12,21 @@ return require('packer').startup(function()
 	-- plugin manager
 	use { 'wbthomason/packer.nvim', opt = true }
 
-	-- easymotion
 	use {
-		'easymotion/vim-easymotion',
-		config = 'require("plugins.easymotion")',
+		'phaazon/hop.nvim',
+		branch = 'v1',
+		config = 'require("plugins.hop")',
+	}
+
+	-- replace
+	-- use {
+	-- 	'wincent/ferret',
+	-- 	config = function()
+	-- 		vim.api.nvim_set_keymap('n', '<Leader>x', '<Plug>(FerretAck)', { noremap = true })
+	-- 	end,
+	-- }
+	use {
+		'brooth/far.vim',
 	}
 
 	-- filer
@@ -68,7 +79,6 @@ return require('packer').startup(function()
 		config = 'require("gitsigns").setup()',
 	}
 
-	-- tig
 	use {
 		'iberianpig/tig-explorer.vim',
 		requires = {
