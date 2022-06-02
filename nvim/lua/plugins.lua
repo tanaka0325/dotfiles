@@ -20,13 +20,16 @@ return require('packer').startup(function()
 
 	-- replace
 	-- use {
-	-- 	'wincent/ferret',
-	-- 	config = function()
-	-- 		vim.api.nvim_set_keymap('n', '<Leader>x', '<Plug>(FerretAck)', { noremap = true })
-	-- 	end,
+	-- 	'brooth/far.vim',
 	-- }
 	use {
-		'brooth/far.vim',
+		'nvim-pack/nvim-spectre',
+		requires = {
+			{ 'nvim-lua/plenary.nvim' },
+		},
+		config = function()
+			vim.api.nvim_set_keymap('n', '<Leader>S', '<cmd>lua require("spectre").open()<CR>', { noremap = true })
+		end,
 	}
 
 	-- filer
