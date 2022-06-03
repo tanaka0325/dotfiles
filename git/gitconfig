@@ -56,8 +56,7 @@
 	process = git-lfs filter-process
 	required = true
 [credential]
-	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
-	#helper = store --file ~/.git-credentials
+	helper = store --file ~/.git-credentials
 [merge]
 	tool = vimdiff
 	conflictstyle = zdiff3
