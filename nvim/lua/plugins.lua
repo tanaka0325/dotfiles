@@ -22,15 +22,15 @@ return require('packer').startup(function()
 	-- use {
 	-- 	'brooth/far.vim',
 	-- }
-	use {
-		'nvim-pack/nvim-spectre',
-		requires = {
-			{ 'nvim-lua/plenary.nvim' },
-		},
-		config = function()
-			vim.api.nvim_set_keymap('n', '<Leader>S', '<cmd>lua require("spectre").open()<CR>', { noremap = true })
-		end,
-	}
+	-- use {
+	-- 	'nvim-pack/nvim-spectre',
+	-- 	requires = {
+	-- 		{ 'nvim-lua/plenary.nvim' },
+	-- 	},
+	-- 	config = function()
+	-- 		vim.api.nvim_set_keymap('n', '<Leader>S', '<cmd>lua require("spectre").open()<CR>', { noremap = true })
+	-- 	end,
+	-- }
 
 	-- filer
 	use {
