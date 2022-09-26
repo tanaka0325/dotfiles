@@ -2,3 +2,6 @@
 .DS_Store
 .vscode/**/*
 vendor/bundle
+
+# ignore git worktree folder
+wk-*/
