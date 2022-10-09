@@ -9,6 +9,8 @@ vim.api.nvim_set_keymap('n', '<Leader>W', ':w!<CR>', { noremap = true })
 -- quit file
 vim.api.nvim_set_keymap('n', '<Leader>q', ':q<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>Q', ':q!<CR>', { noremap = true })
+-- echo current full path
+vim.api.nvim_set_keymap('n', '<Leader>p', ':echo expand("%:p")<CR>', { noremap = true })
 -- go to start/end line
 vim.api.nvim_set_keymap('n', 'H', '^', { noremap = true })
 vim.api.nvim_set_keymap('n', 'L', '$', { noremap = true })
