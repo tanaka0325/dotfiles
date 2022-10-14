@@ -18,20 +18,6 @@ return require('packer').startup(function()
 		config = 'require("plugins.hop")',
 	}
 
-	-- replace
-	-- use {
-	-- 	'brooth/far.vim',
-	-- }
-	-- use {
-	-- 	'nvim-pack/nvim-spectre',
-	-- 	requires = {
-	-- 		{ 'nvim-lua/plenary.nvim' },
-	-- 	},
-	-- 	config = function()
-	-- 		vim.api.nvim_set_keymap('n', '<Leader>S', '<cmd>lua require("spectre").open()<CR>', { noremap = true })
-	-- 	end,
-	-- }
-
 	-- filer
 	use {
 		'tamago324/lir.nvim',
@@ -47,9 +33,8 @@ return require('packer').startup(function()
 
 	-- comment out
 	use {
-		'tyru/caw.vim',
-		event = 'VimEnter *',
-		config = 'require("plugins.caw")',
+		'numToStr/Comment.nvim',
+	 	config = 'require("plugins.comment")',
 	}
 
 	-- colorscheme
