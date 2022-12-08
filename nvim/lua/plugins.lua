@@ -108,4 +108,20 @@ return require('packer').startup(function()
 		{'hrsh7th/cmp-vsnip'},
 		{'hrsh7th/vim-vsnip'},
 	}
+
+	-- copy github link
+	use {
+		'knsh14/cprl.nvim',
+		requires = {'rcarriga/nvim-notify'},
+		cmd = {'CopyRemoteLink',},
+		config = function()
+			require'cprl'.setup {
+				mode = {
+					main = function()
+						return "main" -- always copy link of master branch
+					end
+				}
+			}
+		end
+	}
 end)

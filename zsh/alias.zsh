@@ -4,7 +4,7 @@ alias rm="rm -i"
 alias ls="ls -G"
 
 # replace using rg, sd
-alias rgr='(){rg $1 -r $2 --files-with-matches | xargs -I{} sd $1 $2 {} }'
+alias rgr='(){rg $1 -r $2 --files-with-matches $3 | xargs -I{} sd $1 $2 $3 {} }'
 
 if [ `uname -s` = 'Darwin' ]; then
     alias ls='ls -G'
