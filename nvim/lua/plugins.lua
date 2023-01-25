@@ -119,6 +119,9 @@ return require('packer').startup(function()
 				mode = {
 					main = function()
 						return "main" -- always copy link of master branch
+					end,
+					master = function()
+						return "master"
 					end
 				}
 			}

@@ -77,7 +77,8 @@ nvim_lsp.gopls.setup{
 			env = {
 				GOFLAGS = '-tags=parallel,serial,e2e',
 			}
-		}
+		},
+		["build.experimentalWorkspaceModule"] = true,
 	},
 }
 -- lua

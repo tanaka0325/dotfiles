@@ -50,6 +50,10 @@
 	diffw = diff --word-diff
 	sw = switch
 	wk = worktree
+	cwk = "!f(){ git worktree add ./wk-$1 $1;};f"
+	nwk = "!f(){ git worktree add -b $1 ./wk-$1;};f"
+	rmwk = "!f(){ rm -rf wk-$1 && git worktree prune;};f"
+	rmwkb = "!f(){ rm -rf wk-$1 && git worktree prune && git branch -D $1;};f"
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
