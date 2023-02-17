@@ -75,7 +75,7 @@ nvim_lsp.gopls.setup{
 	settings = {
 		gopls = {
 			env = {
-				GOFLAGS = '-tags=parallel,serial,e2e',
+				GOFLAGS = '-tags=parallel,serial,e2e,wireinject,!wireinject',
 			}
 		},
 		["build.experimentalWorkspaceModule"] = true,
