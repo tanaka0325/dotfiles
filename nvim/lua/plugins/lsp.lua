@@ -97,6 +97,13 @@ nvim_lsp.lua_ls.setup{
 nvim_lsp.yamlls.setup{
 	on_attach = on_attach,
 	capabilities = capabilities,
+	settings = {
+		yaml = {
+			schemas = {
+				["https://json.schemastore.org/circleciconfig#/definitions/jobs/additionalProperties"] = "/.circleci/*"
+			}
+		}
+	}
 }
 -- bashls
 nvim_lsp.bashls.setup{
