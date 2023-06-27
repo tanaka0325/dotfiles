@@ -77,8 +77,11 @@ return require('packer').startup(function()
 	}
 
 	-- languages
-	-- go
+	--- go
 	use 'mattn/vim-goimports'
+
+	--- cue
+	use 'jjo/vim-cue'
 
 	-- fuzzy finder
 	use {

@@ -1,7 +1,7 @@
 require('Comment').setup {
-	opleader = {
-		line = '<Leader>\\'
-	}
+	-- opleader = {
+	-- 	line = '<Leader>\\'
+	-- }
 	-- toggler = {
 	-- 	line = '<Leader>\\'
 	-- }
