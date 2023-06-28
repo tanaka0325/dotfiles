@@ -40,14 +40,7 @@ return require('packer').startup(function()
 	-- colorscheme
 	use {
 		{
-			-- 'rmehri01/onenord.nvim',
-			-- 'folke/tokyonight.nvim',
 			'EdenEast/nightfox.nvim',
-			-- config = function()
-			-- 	-- vim.cmd [[ colorscheme onenord ]]
-			-- 	-- vim.cmd [[ colorscheme tokyonight ]]
-			-- 	-- vim.cmd [[ colorscheme nightfox ]]
-			-- end,
 			config = 'require("plugins.nightfox")',
 		},
 		{
@@ -62,6 +55,7 @@ return require('packer').startup(function()
 	-- git
 	use {
 		'lewis6991/gitsigns.nvim',
+		--tag = 'release',
 		requires = {
 			'nvim-lua/plenary.nvim'
 		},

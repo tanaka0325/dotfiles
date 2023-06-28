@@ -72,3 +72,5 @@
 	path = ~/.gitconfig.local
 [pull]
 	ff = only
+[init]
+	defaultBranch = main
