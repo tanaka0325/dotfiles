@@ -12,6 +12,7 @@ return require('packer').startup(function()
 	-- plugin manager
 	use { 'wbthomason/packer.nvim', opt = true }
 
+	-- jump
 	use {
 		'phaazon/hop.nvim',
 		branch = 'v1',
@@ -61,7 +62,6 @@ return require('packer').startup(function()
 		},
 		config = 'require("gitsigns").setup()',
 	}
-
 	use {
 		'iberianpig/tig-explorer.vim',
 		requires = {
@@ -73,7 +73,6 @@ return require('packer').startup(function()
 	-- languages
 	--- go
 	use 'mattn/vim-goimports'
-
 	--- cue
 	use 'jjo/vim-cue'
 
@@ -106,22 +105,4 @@ return require('packer').startup(function()
 		{'hrsh7th/vim-vsnip'},
 	}
 
-	-- copy github link
-	use {
-		'knsh14/cprl.nvim',
-		requires = {'rcarriga/nvim-notify'},
-		cmd = {'CopyRemoteLink',},
-		config = function()
-			require'cprl'.setup {
-				mode = {
-					main = function()
-						return "main" -- always copy link of master branch
-					end,
-					master = function()
-						return "master"
-					end
-				}
-			}
-		end
-	}
 end)
