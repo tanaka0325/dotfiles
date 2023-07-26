@@ -12,6 +12,9 @@ return require('packer').startup(function()
 	-- plugin manager
 	use { 'wbthomason/packer.nvim', opt = true }
 
+	-- copilot
+	use { 'github/copilot.vim' }
+
 	-- jump
 	use {
 		'phaazon/hop.nvim',
