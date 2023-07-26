@@ -75,7 +75,10 @@ return require('packer').startup(function()
 
 	-- languages
 	--- go
-	use 'mattn/vim-goimports'
+	use {
+		'mattn/vim-goimports',
+		config = 'require("plugins.vim-goimports")',
+	}
 	--- cue
 	use 'jjo/vim-cue'
 
