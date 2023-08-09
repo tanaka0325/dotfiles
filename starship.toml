@@ -3,3 +3,12 @@ add_newline = false
 [gcloud]
 disabled = true
 
+[docker_context]
+disabled = true
+
+[kubernetes]
+format = 'on [⛵$context](dimmed green) '
+disabled = false
+[kubernetes.context_aliases]
+'gke_mercari-jp-citadel-dev_asia-northeast1_citadel-2g-dev-tokyo-01' = 'dev'
+'gke_mercari-jp-citadel-prod_asia-northeast1_citadel-2g-prod-tokyo-01' = 'prod'
