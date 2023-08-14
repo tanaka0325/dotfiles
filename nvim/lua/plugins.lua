@@ -12,6 +12,13 @@ return require('packer').startup(function()
 	-- plugin manager
 	use { 'wbthomason/packer.nvim', opt = true }
 
+	-- align text
+	use {
+		'echasnovski/mini.align',
+		branch = 'stable',
+		config = 'require("plugins.mini-align")',
+	}
+
 	-- copilot
 	use { 'github/copilot.vim' }
 
