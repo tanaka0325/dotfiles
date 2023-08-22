@@ -19,6 +19,16 @@ return require('packer').startup(function()
 		config = 'require("plugins.mini-align")',
 	}
 
+	-- text case
+	use {
+		"johmsalas/text-case.nvim",
+		config = function()
+			require('textcase').setup {
+				prefix = "<leader>tt"
+			}
+		end
+	}
+
 	-- copilot
 	use { 'github/copilot.vim' }
 
