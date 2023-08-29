@@ -30,7 +30,10 @@ return require('packer').startup(function()
 	}
 
 	-- copilot
-	use { 'github/copilot.vim' }
+	use {
+		'github/copilot.vim',
+		config = 'require("plugins.copilot")',
+	}
 
 	-- jump
 	use {
