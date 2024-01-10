@@ -7,3 +7,4 @@ require('plugins')
 -- langueages
 require('languages.protobuf')
 require('languages.markdown')
+require('languages.env')

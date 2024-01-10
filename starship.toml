@@ -7,8 +7,21 @@ disabled = true
 disabled = true
 
 [kubernetes]
-format = 'on [⛵$context](dimmed green) '
+format = 'on [$symbol $context]($style) '
 disabled = false
-[kubernetes.context_aliases]
-'gke_mercari-jp-citadel-dev_asia-northeast1_citadel-2g-dev-tokyo-01' = 'dev'
-'gke_mercari-jp-citadel-prod_asia-northeast1_citadel-2g-prod-tokyo-01' = 'prod'
+
+# [[kubernetes.contexts]]
+# context_pattern = 'gke_mercari-jp-citadel-dev_asia-northeast1_citadel-2g-dev-tokyo-01'
+# context_alias = 'gke-dev'
+
+[[kubernetes.contexts]]
+context_pattern = ".*dev.*"
+style = "green"
+symbol = "🛠️"
+context_alias = 'gke-dev'
+
+[[kubernetes.contexts]]
+context_pattern = ".*prod.*"
+style = "red"
+symbol = "⚠️"
+context_alias = 'gke-prod'
