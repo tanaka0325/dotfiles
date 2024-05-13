@@ -3,6 +3,7 @@ alias np='hugo new post/$(date "+%Y%m%d%H%M%S").md'
 alias rm="rm -i"
 alias ls="ls -G"
 alias g="git"
+alias vim="nvim"
 alias v="nvim"
 alias nv="nvim"
 alias vimdiff="nvim -d"

@@ -2,6 +2,9 @@
 export FZF_DEFAULT_OPTS='--height 80% --reverse --border'
 
 if which fzf > /dev/null; then
+  # zsh
+  eval "$(fzf --zsh)"
+
   # history search
   function select-history() {
     BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")

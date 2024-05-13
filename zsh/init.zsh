@@ -8,11 +8,12 @@ case `uname` in
   ;;
 esac
 
-# starship
-eval "$(starship init zsh)"
+# # for enhancd
+autoload -Uz compinit
+compinit
 
-# zoxide
-eval "$(zoxide init zsh)"
+# plugin manager
+eval "$(sheldon source)"
 
 # read local seting
 if [ -e $HOME/.zshrc.local ]; then

@@ -9,6 +9,7 @@ vim.cmd([[
 ]])
 
 return require('packer').startup(function()
+
 	-- plugin manager
 	use { 'wbthomason/packer.nvim', opt = true }
 
@@ -17,6 +18,17 @@ return require('packer').startup(function()
 		'echasnovski/mini.align',
 		branch = 'stable',
 		config = 'require("plugins.mini-align")',
+	}
+
+
+	-- text case
+	use {
+		"johmsalas/text-case.nvim",
+		config = function()
+			require('textcase').setup {
+			prefix = "<leader>tt"
+		}
+		end
 	}
 
 	-- copilot
@@ -99,6 +111,10 @@ return require('packer').startup(function()
 			{'nvim-lua/plenary.nvim'},
 		},
 		config = 'require("plugins.telescope")',
+	}
+	use {
+		'nvim-telescope/telescope-fzf-native.nvim',
+		run = 'make',
 	}
 
 	-- tree sitter

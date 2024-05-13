@@ -5,8 +5,10 @@ vim/autoload
 # zsh
 zsh/.zim
 zsh/.zcompdump
+zsh/.zcompdump*
 zsh/.zcompdump.zwc
 zsh/.zimrc
 zsh/.zcompcache
 zsh/.zsh_history
 zsh/.zsh_sessions
+vim/.netrwhist
