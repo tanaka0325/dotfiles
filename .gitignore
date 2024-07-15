@@ -1,6 +1,8 @@
+# vim
 vim/plugged
 vim/autoload
 *.local
+nvim/pack/
 
 # zsh
 zsh/.zim
