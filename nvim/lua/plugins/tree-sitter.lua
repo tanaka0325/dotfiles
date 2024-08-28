@@ -20,6 +20,8 @@ return {
 				"typescript",
 				"vim",
 				"yaml",
+				"cue",
+				"terraform",
 			},
 			highlight = {
 				enable = true,
