@@ -129,12 +129,6 @@ return {
 			capabilities = capabilities,
 		}
 
-		-- typescript
-		nvim_lsp.tsserver.setup {
-			on_attach = on_attach,
-			capabilities = capabilities,
-		}
-
 		-- terraform
 		nvim_lsp.terraformls.setup {}
 		vim.api.nvim_create_autocmd({ "BufWritePre" }, {
